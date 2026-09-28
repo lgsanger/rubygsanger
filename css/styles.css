@@ -5,6 +5,10 @@
   --color-french-blue: #3e4b8e;
   --color-midnight-violet: #3d1534;
 
+  --color-teal: #2a6d90;
+  --color-mint: #a2e3db;
+  --color-pale: #ddf1f8;
+
   --color-bg: var(--color-powder-blue);
   --color-text: var(--color-french-blue);
   --color-highlight: var(--color-wheat);
@@ -155,6 +159,203 @@ main {
 .home-link:hover span,
 .home-link:focus-visible span {
   color: var(--color-highlight);
+}
+
+/* Writing portfolio homepage */
+
+body.homepage,
+body.writing-page {
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-pale);
+  background: var(--color-mint);
+}
+
+.writing-header {
+  background: var(--color-teal);
+  text-align: center;
+  padding: 3rem 1.5rem;
+  min-height: 28vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.writing-header h1 {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-weight: 700;
+  color: var(--color-pale);
+  margin-bottom: 0.75rem;
+}
+
+.writing-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  color: var(--color-pale);
+}
+
+.writing-header--subpage {
+  min-height: auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.writing-header--subpage h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 0.65rem;
+  border-radius: 999px;
+  background: var(--color-teal);
+  color: var(--color-pale);
+  text-decoration: none;
+  line-height: 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-button__icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+}
+
+.home-button:hover,
+.home-button:focus-visible {
+  color: var(--color-pale);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(42, 109, 144, 0.35);
+}
+
+.writing-header .home-button {
+  background: var(--color-mint);
+  color: var(--color-teal);
+}
+
+.writing-header .home-button:hover,
+.writing-header .home-button:focus-visible {
+  color: var(--color-teal);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.subpage-home {
+  max-width: var(--max-width);
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.writing-home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 1.5rem;
+  background: var(--color-mint);
+}
+
+.pill-nav {
+  flex: 1;
+  width: min(100%, 42rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.pill-button {
+  display: block;
+  text-align: center;
+  padding: 1.75rem 2rem;
+  border-radius: 999px;
+  background: var(--color-teal);
+  color: var(--color-pale);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pill-button:hover,
+.pill-button:focus-visible {
+  color: var(--color-pale);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(42, 109, 144, 0.35);
+}
+
+.pill-button__title {
+  display: block;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.pill-button__subtitle {
+  display: block;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.writing-content {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  color: var(--color-teal);
+  background: var(--color-mint);
+}
+
+.writing-content p {
+  color: var(--color-teal);
+}
+
+.instagram-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.instagram-list li {
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-teal);
+}
+
+.instagram-list li:last-child {
+  border-bottom: 1px solid var(--color-teal);
+}
+
+.instagram-list a {
+  display: block;
+  font-weight: 700;
+  color: var(--color-teal);
+  margin-bottom: 0.25rem;
+}
+
+.instagram-list a:hover,
+.instagram-list a:focus-visible {
+  color: var(--color-teal);
+  text-decoration: underline;
+}
+
+.instagram-list span {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-teal);
+}
+
+body.homepage .skip-link:focus,
+body.writing-page .skip-link:focus {
+  background: var(--color-teal);
+  color: var(--color-pale);
+}
+
+body.homepage :focus-visible,
+body.writing-page :focus-visible {
+  outline-color: var(--color-teal);
 }
 
 /* Portfolio */
